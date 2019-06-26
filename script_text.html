@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Скрипт текст</title>
+</head>
+    <body>
+
+    	<p id="p1">Пример Текста</p>
+    	<br><b><i>Размер шрифта: </i></b>
+    	<input type="Button" value="Увеличенный" onclick="modification(1);">
+    	<input type="Button" value="Нормальный" onclick="modification(0);">
+    	<input type="Button" value="Уменьшенный" onclick="modification(2);">
+    	<br/><br/><b><i>Цвет фона: </i></b>
+    	<input type="Button" value="Красный" onclick="Color('red');">
+    	<input type="Button" value="Серый" onclick="Color('gray');">
+    	<input type="Button" value="Розовый" onclick="Color('pink');">
+    	<br/><p id="text1" onmouseover="ObjColorover()" onmouseout="ObjColorout()">Здесь текст</p>
+        <br/><span id="text2" onclick="ObjColorclick()">Здесь текст</span>
+        <br/><br/><span id="text3" ondblclick="ObjColodblrclick()">Здесь текст</span>
+    <br/><br/><a href="index.html">Главная</a>
+    	<script>
+    	function modification(action){
+    		if(action==1){document.all["p1"].style.fontSize="150%";}
+    		if(action==0){document.all["p1"].style.fontSize="100%";}
+    		if(action==2){document.all["p1"].style.fontSize="58%"}
+    	}
+        function Color(clr){
+        	document.bgColor=clr;
+        }
+        function ObjColorover(){
+        	text1.style.color='red';
+        }
+        function ObjColorout(){
+        	text1.style.color='black';
+        }
+        function ObjColorclick(){
+        	text2.style.backgroundColor='yellow';
+        }
+        function ObjColodblrclick(){
+        	text3.style.backgroundColor='green';
+        }
+        </script>
+    </body>
+</html>

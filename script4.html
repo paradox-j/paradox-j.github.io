@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Скрипт4</title>
+</head>
+    <body>
+        <script>
+            function get() {
+              var c=1;
+            a=(document.forms[0].a.value); 
+            b=(document.forms[0].b.value);
+            for (var i = a; i <= b; i++) {
+                c*=i;
+            }
+            alert('C='+c);
+            }   
+        </script>
+        <form>
+            <input type="text" size="8" name="a"><br/><br/>
+            <input type="text" size="8" name="b"><br/><br/>
+            <input type="button" value="Вычислить" onclick="get()">
+            <input type="reset" value="Очистить">
+    	</form>
+    </body>
+</html>
